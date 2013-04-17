@@ -1,21 +1,35 @@
+#include "stdafx.h"
 #include "Group.h"
 
-Group::Group(){
-	freeId = 0;
+void Group::update() {
+	for(unsigned int i = 0;i < membres.size();i++) {
+		membres[i] -> update();
+	}
 }
 
-void Group::add(Game_Object* GO){
-	Objects.push_back(GO);
-	IDS.insert(std::pair<int,Game_Object *>(GO->getId(), GO));
-}
-void Group::addandcreate(char type){
-	
+void Group::afficher(sf::RenderWindow& application) {
+	for(unsigned int i = 0;i < membres.size();i++) {
+		membres[i] -> afficher(application);
+	}
 }
 
-void Group::kill(int id){
-	this->AdressFromId(id);//Call kill unless the object is of type Game_Object (this class is virtual pure)
+void Group::ajouter(Objet* obj) {
+	membres.push_back(obj);
 }
 
-Game_Object *Group::AdressFromId(int id){
-	return IDS.find(id)->second;
+std::vector < Objet* > Group::objets() {
+	return membres;
+}
+
+void Group::supprimer(Objet* adresse) {
+	for(unsigned int i = 0;i < membres.size();i++) {
+		if(membres[i] == adresse)
+			membres.erase(membres.begin() + i);
+	}
+}
+
+Group::~Group() {
+	for(unsigned int i = 0;i < membres.size();i++) {
+		membres[i] -> supprimer(this);
+	}
 }

@@ -1,23 +1,23 @@
 #pragma once
-#include "Include.h"
-#include "Game_Object.h"
 
-class Group{
-public:
-	Group();
-	void add(Game_Object* GO);
-	void addandcreate(char type);
-	void kill(int id);
-	void action();
+#include "include.h"
 
-	
-
-	std::map<int,Game_Object *> IDS;
+class Objet;
+class Group {
 private:
-	int freeId;
-	Game_Object *AdressFromId(int id);
-	std::vector<Game_Object*> Objects;
+	//Tableau contenant les membres du groupe
+	std::vector < Objet* > membres;
+public:
+	//Fonction appelant la méthode update de tous les objets appartenant au gruope
+	void update();
+	//Fonction appelant la méthode afficher de tous les objets appartenant au groupe
+	void afficher(sf::RenderWindow&);
+	//Fonction ajoutant un objet au groupe
+	void ajouter(Objet*);
+	//Fonction supprimant un objet du groupe
+	void supprimer(Objet*);
+	//Fonction retournant la liste des membres du groupe
+	std::vector < Objet* > objets();
+
+	~Group();
 };
-//Group permet d'indexer differentes adresses de Game_Object et d'effectuer des modifications sur 
-//l'objet qu'elles pointent.
-//Les IDs sont stockées 
