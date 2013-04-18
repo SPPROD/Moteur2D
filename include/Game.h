@@ -1,24 +1,18 @@
 #pragma once
-#include "include.h"
+#include "Include.h"
 #include "Graphics.h"
+#include "GameContainer.h"
 
-class Graphics;
+
 class Game{
 public:
-	void init(int,int);
+	void init(GameContainer *GC);
+	bool check_events(sf::Event::EventType EV);
 	void update();
 	void render();
-	void draw(sf::Drawable&);
-	void setView(sf::View*);
-	bool isAlive();
-	std::vector < sf::Event > events();
-	void addObject(Objet*);
-	sf::Event event;
-	~Game();
+	bool closeRequested();
 private:
 	Graphics *_graphics;
-	Group* allObjects;
-	bool is_alive;
-	std::vector < sf::Event > evenements;
-	int lastIdGiven;
+	sf::Event event;
+	GameContainer * _GC;
 };

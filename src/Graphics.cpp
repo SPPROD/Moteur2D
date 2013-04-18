@@ -1,26 +1,21 @@
-#include "stdafx.h"
 #include "Graphics.h"
 
-void Graphics::init(Game *G,int width,int height){
+void Graphics::init(Game *G){
 	_game = G;
-	Window.create(sf::VideoMode(width,height),"Game Engine");
+	Window.create(sf::VideoMode(640,480),"Game Engine");
 }
 
 sf::RenderWindow &Graphics::getWindow(){
 	return Window;
 }
 
-void Graphics::render(Group* groupe) {
-	Window.clear(sf::Color(255,255,255,255));
-	groupe -> afficher(Window);
-	for(unsigned int i = 0;i < objects.size();i++) {
-		Window.draw(*objects[i]);
-	}
-	objects.clear();
-	Window.display();
-	Window.setFramerateLimit(40);
+void Graphics::draw(sf::Sprite &Sprite){
+	Window.draw(Sprite);
+}
+void Graphics::draw(sf::Sprite &Sprite, sf::RenderWindow &Target){
+	Target.draw(Sprite);
 }
 
-void Graphics::addObjectToDraw(sf::Drawable& obj) {
-	objects.push_back(&obj);
+void Graphics::draw(sf::Sprite &Sprite, sf::RenderTexture &Target){
+	Target.draw(Sprite);
 }

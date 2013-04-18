@@ -1,18 +1,19 @@
 #pragma once
 #include "Include.h"
 #include "Game.h"
-
-class Game;
+#include "Group.h"
 class Graphics{
 public:
-	void init(Game *G,int,int);
+	void init(Game *G);
 	sf::RenderWindow &getWindow();
-	void render(Group*);
-	void addObjectToDraw(sf::Drawable&);
 	
 	//Graphicals functions
+	void draw(sf::Sprite &Sprite);
+	void draw(sf::Sprite &Sprite, sf::RenderWindow &Target);
+	void draw(sf::Sprite &Sprite, sf::RenderTexture &Target);
+
+	void draw(Group*);
 private:
 	sf::RenderWindow Window;
-	std::vector < sf::Drawable* > objects;
 	Game * _game;
 };
