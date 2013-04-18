@@ -23,6 +23,14 @@ void Objet::supprimer(Group* exception) {
 	delete this;
 }
 
+int Objet::getId() const {
+	return id;
+}
+
+void Objet::setId(int i) {
+	id = i;
+}
+
 void Objet::afficher(sf::RenderWindow& app) {
 	//On affiche l'objet
 	app.draw(sprite);

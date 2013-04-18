@@ -1,0 +1,41 @@
+﻿La génération a démarré 18/04/2013 10:38:44.
+     1>Projet "C:\Users\alpha\Documents\Visual Studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.vcxproj" sur le nœud 2 (Build cible(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Users\alpha\Music\SFML-2.0-rc\include" /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\Moteur2d.pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleApplication3.cpp Doodle.cpp Game.cpp Graphics.cpp Jeu.cpp Platforms.cpp
+         ConsoleApplication3.cpp
+         Doodle.cpp
+     1>Doodle.cpp(12): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+     1>Doodle.cpp(13): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Doodle.cpp(16): warning C4244: '=' : conversion de 'float' en 'int', perte possible de données
+     1>Doodle.cpp(29): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Doodle.cpp(45): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Doodle.cpp(59): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Doodle.cpp(64): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+         Game.cpp
+         Graphics.cpp
+         Jeu.cpp
+     1>Jeu.cpp(88): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Jeu.cpp(93): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+         Platforms.cpp
+     1>Platforms.cpp(15): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Platforms.cpp(18): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+     1>Platforms.cpp(22): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\alpha\Documents\Visual Studio 2012\Projects\ConsoleApplication3\Release\Moteur2d.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\alpha\Music\SFML-2.0-rc\lib" "sfml-graphics.lib" "sfml-window.lib" "sfml-system.lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\alpha\Documents\Visual Studio 2012\Projects\ConsoleApplication3\Release\Moteur2d.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\alpha\Documents\Visual Studio 2012\Projects\ConsoleApplication3\Release\Moteur2d.lib" /MACHINE:X86 /SAFESEH Release\CollisionManager.obj
+         Release\ConsoleApplication3.obj
+         Release\Game.obj
+         Release\Graphics.obj
+         Release\Group.obj
+         Release\Objet.obj
+         Release\Platforms.obj
+         Release\Doodle.obj
+         Release\Jeu.obj
+         Release\stdafx.obj
+         Génération de code en cours
+         Fin de la génération du code
+         ConsoleApplication3.vcxproj -> C:\Users\alpha\Documents\Visual Studio 2012\Projects\ConsoleApplication3\Release\Moteur2d.exe
+     1>Génération du projet "C:\Users\alpha\Documents\Visual Studio 2012\Projects\ConsoleApplication3\ConsoleApplication3\ConsoleApplication3.vcxproj" terminée (Build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:23.66

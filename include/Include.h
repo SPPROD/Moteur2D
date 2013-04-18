@@ -1,11 +1,4 @@
-#pragma once
-
-#include "SFML/Graphics.hpp"
-#include <vector>
-#include <map>
-
-class GameContainer;
-class Game;
-class Graphics;
-class Group;
-class Game_Object;
+#include <iostream>
+#include <SFML\Graphics.hpp>
+#include "Group.h"
+#include "Objet.h"

@@ -28,6 +28,13 @@ void Group::supprimer(Objet* adresse) {
 	}
 }
 
+Objet* Group::getById(int id) {
+	for(unsigned int i = 0;i < membres.size();i++) {
+		if(membres[i] -> getId() == id)
+			return membres[i];
+	}
+}
+
 Group::~Group() {
 	for(unsigned int i = 0;i < membres.size();i++) {
 		membres[i] -> supprimer(this);

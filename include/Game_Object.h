@@ -7,6 +7,7 @@ public:
 	virtual void Move() = 0;
 	virtual void Action() = 0;
 
+
 	void setId(int i);
 	sf::Sprite &getSprite();
 	int getId();

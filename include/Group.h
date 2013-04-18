@@ -18,6 +18,8 @@ public:
 	void supprimer(Objet*);
 	//Fonction retournant la liste des membres du groupe
 	std::vector < Objet* > objets();
+	//Retourne l'adresse d'un objet avec son id
+	Objet* getById(int);
 
 	~Group();
 };
